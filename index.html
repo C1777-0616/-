@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>建筑风格人格测试</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="background-slideshow"></div>
+
+    <div id="app">
+      <header class="app-header">
+        <h1>建筑风格人格测试</h1>
+        <p class="subtitle">通过一组场景题，匹配你的专属建筑风格</p>
+      </header>
+
+      <main class="card">
+        <div id="progress-container">
+          <div id="progress-label"></div>
+          <div class="progress-bar">
+            <div id="progress-inner"></div>
+          </div>
+        </div>
+
+        <section id="question-section" class="question-section">
+          <!-- JS 动态渲染题目 -->
+        </section>
+
+        <footer class="controls">
+          <button id="prev-btn" class="btn secondary">上一题</button>
+          <button id="next-btn" class="btn primary">下一题</button>
+        </footer>
+      </main>
+    </div>
+
+    <script src="./questions.js"></script>
+    <script src="./app.js"></script>
+  </body>
+  </html>
+
