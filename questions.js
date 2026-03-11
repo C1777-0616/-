@@ -4,8 +4,9 @@
 // japMinimal（日式极简）、nordic（北欧）、industrial（工业风）、
 // neoChinese（新中式）、mediterranean（地中海）
 
+// 精简版题库：共 36 题，尽量减少场景重复
 const QUESTIONS = [
-  // ========= 日常生活 · 回家篇 =========
+  // ========= 日常生活 · 回家篇（6 题）=========
   {
     id: 1,
     category: "日常生活 · 回家",
@@ -36,7 +37,7 @@ const QUESTIONS = [
   },
   {
     id: 2,
-    category: "日常生活 · 回家",
+    category: "日常生活 · 空间大小",
     title:
       "你被安排住进一个 30 平方的小户型，三年不能搬家，你最在意的是？",
     options: [
@@ -84,40 +85,13 @@ const QUESTIONS = [
       },
       {
         label: "D",
-        text: "白墙+浅木地板+一串小灯，床上堆着不同纹理的抱枕和毯子。",
+        text: "白墙+浅木地板+柔软织物，整个房间像一杯拿铁。",
         scores: { nordic: 2 },
       },
     ],
   },
   {
     id: 4,
-    category: "日常生活 · 早晨",
-    title: "周末早上赖在家里，你最想在哪个角落喝咖啡/茶？",
-    options: [
-      {
-        label: "A",
-        text: "落地窗旁的一张清爽长桌，电脑、书、本子都能摊开。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "带雕花的圆桌和软包椅，桌上有花瓶和烛台。",
-        scores: { classicism: 1, baroque: 2 },
-      },
-      {
-        label: "C",
-        text: "榻榻米边几+坐垫，窗外有一小片竹子或绿植。",
-        scores: { japMinimal: 2, neoChinese: 1 },
-      },
-      {
-        label: "D",
-        text: "靠窗的软塌和编织地毯，脚下是一块毛茸茸小地毯。",
-        scores: { nordic: 2, mediterranean: 1 },
-      },
-    ],
-  },
-  {
-    id: 5,
     category: "日常生活 · 厨房",
     title: "理想中的厨房，更接近哪一种？",
     options: [
@@ -138,13 +112,13 @@ const QUESTIONS = [
       },
       {
         label: "D",
-        text: "白墙+蓝色或彩色瓷砖、粗糙台面，推开窗就是阳光和风。",
+        text: "白墙+蓝色瓷砖、粗糙台面，推开窗就是阳光和风。",
         scores: { mediterranean: 2 },
       },
     ],
   },
   {
-    id: 6,
+    id: 5,
     category: "日常生活 · 客厅",
     title: "如果只能保留一件客厅里的“大件”，你会留？",
     options: [
@@ -171,23 +145,23 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 7,
+    id: 6,
     category: "日常生活 · 浴室",
-    title: "理想的浴室氛围更偏向哪种？",
+    title: "洗澡这件小事，你更想要怎样的浴室？",
     options: [
       {
         label: "A",
-        text: "白色大砖+极简玻璃隔断，像酒店里的干净浴室。",
+        text: "白砖+极简玻璃隔断，像酒店里的干净浴室。",
         scores: { modernism: 2 },
       },
       {
         label: "B",
-        text: "有弧形浴缸、金色龙头和壁灯，泡澡像参加私密宴会。",
+        text: "弧形浴缸+金色龙头+壁灯，泡澡像参加私人宴会。",
         scores: { baroque: 2, classicism: 1 },
       },
       {
         label: "C",
-        text: "木质地台+石材台面+绿植，像小型温泉旅馆。",
+        text: "木质地台+石材+绿植，像小型温泉旅馆。",
         scores: { japMinimal: 1, nordic: 1, neoChinese: 1 },
       },
       {
@@ -197,36 +171,10 @@ const QUESTIONS = [
       },
     ],
   },
+
+  // ========= 城市漫步 · 旅行篇（10 题）=========
   {
-    id: 8,
-    category: "日常生活 · 工作角",
-    title: "家里必须有的工作/创作角，你更想长什么样？",
-    options: [
-      {
-        label: "A",
-        text: "干净桌面+隐藏收纳，电脑和文具都排好队。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "老式书桌+台灯+厚重窗帘，像老教授的书房。",
-        scores: { classicism: 2, neoChinese: 1 },
-      },
-      {
-        label: "C",
-        text: "矮桌或可坐可躺的小角落，窗外有自然光和一小块景色。",
-        scores: { japMinimal: 1, nordic: 2 },
-      },
-      {
-        label: "D",
-        text: "墙上可以贴画、打孔、挂各种工具，桌面永远像在做实验。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  // ========= 城市漫步 · 旅行篇 =========
-  {
-    id: 9,
+    id: 7,
     category: "旅行 · 初印象",
     title: "第一次到一个陌生城市，你会先去哪里感受它？",
     options: [
@@ -253,7 +201,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 10,
+    id: 8,
     category: "旅行 · 街道",
     title: "你理想中最想逛一整天的街道是？",
     options: [
@@ -280,7 +228,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 11,
+    id: 9,
     category: "旅行 · 广场",
     title: "你在一个广场上，四周有四栋建筑，你会第一眼看向哪一栋？",
     options: [
@@ -307,7 +255,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 12,
+    id: 10,
     category: "旅行 · 拍照",
     title: "如果只能拍一张照片发朋友圈，你会选择？",
     options: [
@@ -334,7 +282,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 13,
+    id: 11,
     category: "旅行 · 住宿",
     title: "旅行住宿，你更想体验哪种酒店/民宿？",
     options: [
@@ -361,7 +309,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 14,
+    id: 12,
     category: "旅行 · 城市夜晚",
     title: "城市的夜晚，你最想在哪里停下来多待一会？",
     options: [
@@ -388,7 +336,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 15,
+    id: 13,
     category: "旅行 · 公共空间",
     title: "在一个大型公共建筑（比如车站/机场），你最在意什么？",
     options: [
@@ -415,35 +363,8 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 16,
-    category: "旅行 · 博物馆",
-    title: "你走进一个博物馆，更容易被哪种展陈空间打动？",
-    options: [
-      {
-        label: "A",
-        text: "白盒子展厅，光线精确打在展品上，其他都退到背景里。",
-        scores: { modernism: 2, japMinimal: 1 },
-      },
-      {
-        label: "B",
-        text: "带穹顶、壁画和大台阶的经典展厅。",
-        scores: { classicism: 2, baroque: 1 },
-      },
-      {
-        label: "C",
-        text: "一层层木平台、楼梯和空中走廊，像在林间穿行。",
-        scores: { nordic: 2, neoChinese: 1 },
-      },
-      {
-        label: "D",
-        text: "保留原有厂房结构，只做最小改造，粗糙墙面和新展品形成反差。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 17,
-    category: "旅行 · 城市边界",
+    id: 14,
+    category: "旅行 · 边界",
     title: "如果只能在下列地方散步一小时，你会选？",
     options: [
       {
@@ -469,34 +390,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 18,
-    category: "旅行 · 纪念品",
-    title: "旅行结束前，你最想带走怎样的“空间记忆”？",
-    options: [
-      {
-        label: "A",
-        text: "一张关于光影与线条的极简照片。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "一张在拱门、穹顶下仰拍的照片。",
-        scores: { classicism: 1, baroque: 2 },
-      },
-      {
-        label: "C",
-        text: "一张老街、胡同或巷子里生活细节的照片。",
-        scores: { neoChinese: 2 },
-      },
-      {
-        label: "D",
-        text: "一张海风吹着白墙和蓝窗的照片。",
-        scores: { mediterranean: 2, nordic: 1 },
-      },
-    ],
-  },
-  {
-    id: 19,
+    id: 15,
     category: "旅行 · 迷路",
     title: "如果一定要在一个区域迷路，你会选择？",
     options: [
@@ -523,7 +417,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 20,
+    id: 16,
     category: "旅行 · 天气",
     title: "下雨天时，哪种建筑让你更想钻进去避雨？",
     options: [
@@ -549,9 +443,10 @@ const QUESTIONS = [
       },
     ],
   },
-  // ========= 特殊情景 · 极端设定 =========
+
+  // ========= 特殊情景 · 极端设定（8 题）=========
   {
-    id: 21,
+    id: 17,
     category: "特殊情景 · 极端天气",
     title:
       "气象预警发布：一场几十年一遇的暴雨即将到来，你必须在一栋建筑里躲 24 小时，你更信任哪一种？",
@@ -579,7 +474,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 22,
+    id: 18,
     category: "特殊情景 · 火星城市",
     title: "假如你被邀请去“火星第一座城市”当体验居民，你希望自己的房子是？",
     options: [
@@ -606,7 +501,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 23,
+    id: 19,
     category: "特殊情景 · 秘密基地",
     title: "如果你拥有一座“秘密基地”，它会是什么样？",
     options: [
@@ -633,7 +528,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 24,
+    id: 20,
     category: "特殊情景 · 世界只剩一城",
     title: "如果世界只剩下一座城市，你希望它长什么样？",
     options: [
@@ -660,7 +555,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 25,
+    id: 21,
     category: "特殊情景 · 孤独时刻",
     title: "你想在哪种建筑里独处一整天？",
     options: [
@@ -687,7 +582,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 26,
+    id: 22,
     category: "特殊情景 · 电影场景",
     title: "如果你是电影角色，你更想在哪种建筑里登场？",
     options: [
@@ -714,7 +609,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 27,
+    id: 23,
     category: "特殊情景 · 时间旅行",
     title: "如果你可以穿越去一个建筑时代短住，你会选？",
     options: [
@@ -741,89 +636,36 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 28,
-    category: "特殊情景 · 末日选择",
-    title: "如果末日来临时，你只能躲进一种建筑类型，你选？",
+    id: 24,
+    category: "特殊情景 · 终极房子",
+    title: "如果只能拥有一栋“终极房子”，它更接近？",
     options: [
       {
         label: "A",
-        text: "结构可靠、可清楚看到支撑系统的现代建筑。",
-        scores: { modernism: 2, industrial: 1 },
+        text: "一栋极简、通透、功能高效的现代住宅。",
+        scores: { modernism: 3 },
       },
       {
         label: "B",
-        text: "厚墙深窗、有地窖和厚重门扇的传统建筑。",
-        scores: { neoChinese: 2, classicism: 1 },
+        text: "一栋带庭院、长廊和仪式感满满空间的经典住宅。",
+        scores: { classicism: 2, baroque: 1, neoChinese: 1 },
       },
       {
         label: "C",
-        text: "半地下、贴近山体或大地的建筑。",
-        scores: { japMinimal: 1, nordic: 1 },
+        text: "一栋被自然包裹、内部是木头和柔光的疗愈系住宅。",
+        scores: { japMinimal: 1, nordic: 2, neoChinese: 1 },
       },
       {
         label: "D",
-        text: "在高处的白色建筑群，从窗户能一眼看到很远。",
-        scores: { mediterranean: 2 },
+        text: "一栋靠近海或港口、可以任意改造的自由房子。",
+        scores: { mediterranean: 2, industrial: 1 },
       },
     ],
   },
+
+  // ========= 细节偏好 · 材料与光（6 题）=========
   {
-    id: 29,
-    category: "特殊情景 · 人生大事",
-    title: "如果结婚/重要仪式可以在任何建筑里办，你会选？",
-    options: [
-      {
-        label: "A",
-        text: "极简玻璃教堂/现代礼堂，阳光洒满整个空间。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "经典教堂/殿堂，有长长的中轴和穹顶。",
-        scores: { classicism: 1, baroque: 2 },
-      },
-      {
-        label: "C",
-        text: "有庭院、水面和树影的新中式空间。",
-        scores: { neoChinese: 2, japMinimal: 1 },
-      },
-      {
-        label: "D",
-        text: "海边或悬崖上的小教堂/小白房。",
-        scores: { mediterranean: 2, nordic: 1 },
-      },
-    ],
-  },
-  {
-    id: 30,
-    category: "特殊情景 · 梦想工作空间",
-    title: "如果给你一栋建筑做“梦想工作室”，你更想要？",
-    options: [
-      {
-        label: "A",
-        text: "现代办公楼顶层的通透空间。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "老宅或带天井的传统建筑。",
-        scores: { neoChinese: 2, classicism: 1 },
-      },
-      {
-        label: "C",
-        text: "被树林/自然包围的木屋或玻璃盒子。",
-        scores: { nordic: 2, japMinimal: 1 },
-      },
-      {
-        label: "D",
-        text: "改造过的厂房或仓库，有巨大开间和高高的天花板。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  // ========= 细节偏好 · 材料与光 =========
-  {
-    id: 31,
+    id: 25,
     category: "细节偏好 · 材料",
     title: "如果只能在家里大量使用一种材料，你会选？",
     options: [
@@ -850,7 +692,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 32,
+    id: 26,
     category: "细节偏好 · 光线",
     title: "你最着迷哪种光线在空间里的效果？",
     options: [
@@ -877,7 +719,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 33,
+    id: 27,
     category: "细节偏好 · 色彩",
     title: "你更愿意长期待在怎样色调的空间里？",
     options: [
@@ -904,34 +746,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 34,
-    category: "细节偏好 · 家具",
-    title: "挑家具时，你优先看重的是？",
-    options: [
-      {
-        label: "A",
-        text: "线条是否利落，比例是否干净。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "雕刻、弧线和细节，哪怕有点“隆重”。",
-        scores: { classicism: 1, baroque: 2 },
-      },
-      {
-        label: "C",
-        text: "木质触感如何，是否有“手工感”和温度。",
-        scores: { japMinimal: 1, neoChinese: 1, nordic: 1 },
-      },
-      {
-        label: "D",
-        text: "是否可以改造/重组，例如托盘+脚架自己搭桌子。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 35,
+    id: 28,
     category: "细节偏好 · 装饰",
     title: "如果只能在家里挂一样“装饰品”，你更想挂？",
     options: [
@@ -958,7 +773,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 36,
+    id: 29,
     category: "细节偏好 · 窗户",
     title: "你最喜欢哪种窗户形状？",
     options: [
@@ -985,88 +800,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 37,
-    category: "细节偏好 · 空间感",
-    title: "空间给你的第一感觉，更重要的是？",
-    options: [
-      {
-        label: "A",
-        text: "利落、干净、可预测。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "隆重、有故事、带一点戏剧性。",
-        scores: { classicism: 1, baroque: 2 },
-      },
-      {
-        label: "C",
-        text: "安静、自然、让人自动放慢节奏。",
-        scores: { japMinimal: 1, nordic: 2 },
-      },
-      {
-        label: "D",
-        text: "粗粝、真实、带一点“边缘感”。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 38,
-    category: "细节偏好 · 声音",
-    title: "你更喜欢在建筑里听到哪种声音？",
-    options: [
-      {
-        label: "A",
-        text: "脚步声在大堂里清晰回响。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "教堂/钟楼的钟声、长廊里的轻微回声。",
-        scores: { classicism: 2, baroque: 1 },
-      },
-      {
-        label: "C",
-        text: "风吹过树叶、水声和一点点鸟叫。",
-        scores: { nordic: 2, japMinimal: 1, neoChinese: 1 },
-      },
-      {
-        label: "D",
-        text: "远处机器运转声、火车或厂房里的回音。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 39,
-    category: "细节偏好 · 气味",
-    title: "你最期待建筑空间里弥漫什么味道？",
-    options: [
-      {
-        label: "A",
-        text: "略带冷感的金属+新鲜空气。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "旧木头、蜡烛或古书混合的味道。",
-        scores: { classicism: 1, baroque: 2 },
-      },
-      {
-        label: "C",
-        text: "木头、茶、植物和雨后泥土的味道。",
-        scores: { japMinimal: 1, neoChinese: 2, nordic: 1 },
-      },
-      {
-        label: "D",
-        text: "海风混着盐分，还有一点晒干石头的味道。",
-        scores: { mediterranean: 2 },
-      },
-    ],
-  },
-  {
-    id: 40,
+    id: 30,
     category: "细节偏好 · 楼梯",
     title: "哪种楼梯让你“忍不住想多走几遍”？",
     options: [
@@ -1092,9 +826,10 @@ const QUESTIONS = [
       },
     ],
   },
-  // ========= 生活方式 · 城市与家 =========
+
+  // ========= 生活方式 & 想象场景（6 题）=========
   {
-    id: 41,
+    id: 31,
     category: "生活方式 · 城市选择",
     title: "如果必须在以下四种城市中选一个长住，你会选？",
     options: [
@@ -1121,34 +856,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 42,
-    category: "生活方式 · 社交",
-    title: "你更愿意在哪种空间里和朋友聚会？",
-    options: [
-      {
-        label: "A",
-        text: "现代高楼中的顶层酒吧或餐厅。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "有壁炉和厚重窗帘的老房子里。",
-        scores: { classicism: 1, baroque: 2 },
-      },
-      {
-        label: "C",
-        text: "庭院中，树下摆几张桌子，灯串挂在枝头。",
-        scores: { neoChinese: 2, nordic: 1, japMinimal: 1 },
-      },
-      {
-        label: "D",
-        text: "改造过的仓库或厂房，空间开阔，可以很吵闹。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 43,
+    id: 32,
     category: "生活方式 · 独处",
     title: "你更愿意在哪种地方一个人静静待着？",
     options: [
@@ -1175,197 +883,34 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 44,
-    category: "生活方式 · 通勤",
-    title: "每天通勤路上，如果可以选择，你更想穿过？",
+    id: 33,
+    category: "生活方式 · 聚会",
+    title: "如果你在家办小型聚会，你希望空间更像？",
     options: [
       {
         label: "A",
-        text: "现代写字楼和通透大堂组成的“玻璃走廊”。",
+        text: "现代画廊/设计展厅，大家边看东西边聊天。",
         scores: { modernism: 2 },
       },
       {
         label: "B",
-        text: "有拱廊和柱廊的经典街道。",
-        scores: { classicism: 2 },
+        text: "古典客厅或带餐厅的长桌空间。",
+        scores: { classicism: 1, baroque: 2 },
       },
       {
         label: "C",
-        text: "穿过一小片林子或河边步道再到公司。",
-        scores: { nordic: 2, japMinimal: 1 },
+        text: "日式/中式庭院边的室内+室外混合空间。",
+        scores: { neoChinese: 2, japMinimal: 1 },
       },
       {
         label: "D",
-        text: "经过改造厂房区、铁路和仓库，再抵达办公楼。",
+        text: "像小酒馆/仓库派对那样，有吧台和高桌。",
         scores: { industrial: 2 },
       },
     ],
   },
   {
-    id: 45,
-    category: "生活方式 · 休假日",
-    title: "一整天假期，你更想在哪种建筑/街区度过？",
-    options: [
-      {
-        label: "A",
-        text: "现代艺术区和设计店云集的新城区。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "博物馆、剧院和古典街道聚集的文化区。",
-        scores: { classicism: 2, baroque: 1 },
-      },
-      {
-        label: "C",
-        text: "有古街、庙宇、老宅改造空间的旧城。",
-        scores: { neoChinese: 2 },
-      },
-      {
-        label: "D",
-        text: "连续的海滩、台阶和面海建筑组成的滨海带。",
-        scores: { mediterranean: 2 },
-      },
-    ],
-  },
-  {
-    id: 46,
-    category: "生活方式 · 养宠物",
-    title: "如果你养宠物，你希望它们在怎样的空间里跑跳？",
-    options: [
-      {
-        label: "A",
-        text: "开阔的客厅和阳台，家具线条简单，不怕磕碰。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "有楼梯、平台和不同高度空间的老房子。",
-        scores: { classicism: 1, neoChinese: 2 },
-      },
-      {
-        label: "C",
-        text: "大量木地板、地毯和软布的家。",
-        scores: { nordic: 2, japMinimal: 1 },
-      },
-      {
-        label: "D",
-        text: "仓库式空间，宠物可以在梁柱之间随便穿梭。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 47,
-    category: "生活方式 · 儿童视角",
-    title: "如果有小孩，你希望他/她在怎样的环境里长大？",
-    options: [
-      {
-        label: "A",
-        text: "现代、安全、规则清晰的社区。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "可以在广场、台阶和古典街道间自由跑的城市中心。",
-        scores: { classicism: 2, baroque: 1 },
-      },
-      {
-        label: "C",
-        text: "附近有公园、小河和老街区，既有自然也有街巷文化。",
-        scores: { neoChinese: 2, nordic: 1 },
-      },
-      {
-        label: "D",
-        text: "靠近海边或山脚的小镇，从小就习惯在坡道和台阶间爬上爬下。",
-        scores: { mediterranean: 2 },
-      },
-    ],
-  },
-  {
-    id: 48,
-    category: "生活方式 · 夜猫子",
-    title: "作为“夜猫子”，你最想在哪种建筑里熬夜？",
-    options: [
-      {
-        label: "A",
-        text: "通透的高层公寓，俯瞰城市灯光。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "老城深处的老宅书房，窗外是一条安静小巷。",
-        scores: { classicism: 1, neoChinese: 1 },
-      },
-      {
-        label: "C",
-        text: "海边的小房子，听着浪声发呆到天亮。",
-        scores: { mediterranean: 2 },
-      },
-      {
-        label: "D",
-        text: "旧工厂改造的工作室，楼下可能还有人 rehearsing。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 49,
-    category: "生活方式 · 早起人",
-    title: "如果你是早起型人类，你更想在哪种空间开始一天？",
-    options: [
-      {
-        label: "A",
-        text: "向东的大窗旁边，看太阳从现代城市天际线升起。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "古典街区边缘的小阳台，听城市慢慢醒来。",
-        scores: { classicism: 2, baroque: 1 },
-      },
-      {
-        label: "C",
-        text: "面向庭院或山景的窗前榻榻米/木地板。",
-        scores: { japMinimal: 1, neoChinese: 2, nordic: 1 },
-      },
-      {
-        label: "D",
-        text: "面朝海面/港口的露台，看第一艘船出港。",
-        scores: { mediterranean: 2 },
-      },
-    ],
-  },
-  {
-    id: 50,
-    category: "生活方式 · 购物环境",
-    title: "你更愿意在哪种“建筑环境”中逛街？",
-    options: [
-      {
-        label: "A",
-        text: "现代购物中心+设计店。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "古典街区中的精品小店，一家一家慢慢逛。",
-        scores: { classicism: 2, baroque: 1 },
-      },
-      {
-        label: "C",
-        text: "老街/集市，有摊贩、有老房子、有日常生活味道。",
-        scores: { neoChinese: 2 },
-      },
-      {
-        label: "D",
-        text: "海边小镇的临街店铺和小广场。",
-        scores: { mediterranean: 2 },
-      },
-    ],
-  },
-  // ========= 想象场景 · 空间人格 =========
-  {
-    id: 51,
+    id: 34,
     category: "想象场景 · 空间人格",
     title: "如果把你当成一栋建筑，你更希望别人怎么形容你？",
     options: [
@@ -1392,61 +937,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 52,
-    category: "想象场景 · 入口瞬间",
-    title: "走进一个陌生建筑的第一秒，你最希望体验到什么？",
-    options: [
-      {
-        label: "A",
-        text: "眼前豁然开朗，空间逻辑一眼就懂。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "被高高的穹顶、楼梯和光线吓一跳。",
-        scores: { classicism: 1, baroque: 2 },
-      },
-      {
-        label: "C",
-        text: "感觉空气变安静了，脚步声都像被软化。",
-        scores: { japMinimal: 1, neoChinese: 1, nordic: 1 },
-      },
-      {
-        label: "D",
-        text: "看到结构、管线和粗粝材料，觉得“好真实”。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 53,
-    category: "想象场景 · 阳台",
-    title: "如果你拥有一个非常理想的阳台，它更可能是？",
-    options: [
-      {
-        label: "A",
-        text: "极简栏杆+一圈玻璃，视野无敌。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "带铁艺栏杆和花盆的经典阳台。",
-        scores: { classicism: 2, baroque: 1 },
-      },
-      {
-        label: "C",
-        text: "木栅栏+竹帘+植物，感觉像小庭院的一角。",
-        scores: { japMinimal: 1, neoChinese: 2, nordic: 1 },
-      },
-      {
-        label: "D",
-        text: "白墙+蓝色门窗+一把躺椅，面向海或城市。",
-        scores: { mediterranean: 2 },
-      },
-    ],
-  },
-  {
-    id: 54,
+    id: 35,
     category: "想象场景 · 窗外世界",
     title: "理想中的“窗外世界”，你更偏向？",
     options: [
@@ -1473,7 +964,7 @@ const QUESTIONS = [
     ],
   },
   {
-    id: 55,
+    id: 36,
     category: "想象场景 · 屋顶",
     title: "如果可以随时上屋顶，你更希望那是？",
     options: [
@@ -1499,143 +990,7 @@ const QUESTIONS = [
       },
     ],
   },
-  {
-    id: 56,
-    category: "想象场景 · 楼下是什么",
-    title: "如果你住在楼上，你最希望“楼下”是什么？",
-    options: [
-      {
-        label: "A",
-        text: "现代办公区/商场，生活很便利。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "剧院、书店和老咖啡馆。",
-        scores: { classicism: 1, baroque: 1, neoChinese: 1 },
-      },
-      {
-        label: "C",
-        text: "传统菜市场、小馆子和老巷子。",
-        scores: { neoChinese: 2 },
-      },
-      {
-        label: "D",
-        text: "海边步道或小港口，出门就能看到水。",
-        scores: { mediterranean: 2 },
-      },
-    ],
-  },
-  {
-    id: 57,
-    category: "想象场景 · 工作模式",
-    title: "如果你在家办公，你更希望哪种“空间氛围”帮你进入状态？",
-    options: [
-      {
-        label: "A",
-        text: "干净桌面+直线条+冷静配色。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "被书架、厚重窗帘和大桌子包围。",
-        scores: { classicism: 2, neoChinese: 1 },
-      },
-      {
-        label: "C",
-        text: "有植物、木头和自然光的小角落。",
-        scores: { nordic: 2, japMinimal: 1 },
-      },
-      {
-        label: "D",
-        text: "有一点杂乱、有工具、有模型的工作台。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 58,
-    category: "想象场景 · 聚会模式",
-    title: "如果你在家办小型聚会，你希望空间更像？",
-    options: [
-      {
-        label: "A",
-        text: "现代画廊/设计展厅，大家边看东西边聊天。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "古典客厅或带餐厅的长桌空间。",
-        scores: { classicism: 1, baroque: 2 },
-      },
-      {
-        label: "C",
-        text: "日式/中式庭院边的室内+室外混合空间。",
-        scores: { neoChinese: 2, japMinimal: 1 },
-      },
-      {
-        label: "D",
-        text: "像小酒馆/仓库派对那样，有吧台和高桌。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 59,
-    category: "想象场景 · 情绪修复",
-    title: "心情很糟但你必须出门，你会选择走进哪种建筑“充电”？",
-    options: [
-      {
-        label: "A",
-        text: "安静的现代博物馆/美术馆。",
-        scores: { modernism: 2 },
-      },
-      {
-        label: "B",
-        text: "古老教堂/寺庙，坐在长椅或台阶上。",
-        scores: { classicism: 1, neoChinese: 2 },
-      },
-      {
-        label: "C",
-        text: "靠近水的地方：海边/湖边/河边的建筑。",
-        scores: { mediterranean: 2, nordic: 1 },
-      },
-      {
-        label: "D",
-        text: "有音乐、咖啡味和一点点杂乱的工厂改造空间。",
-        scores: { industrial: 2 },
-      },
-    ],
-  },
-  {
-    id: 60,
-    category: "想象场景 · 终极房子",
-    title: "最后一题：如果只能拥有一栋“终极房子”，它更接近？",
-    options: [
-      {
-        label: "A",
-        text: "一栋极简、通透、功能高效的现代住宅。",
-        scores: { modernism: 3 },
-      },
-      {
-        label: "B",
-        text: "一栋带庭院、长廊和仪式感满满空间的经典住宅。",
-        scores: { classicism: 2, baroque: 1, neoChinese: 1 },
-      },
-      {
-        label: "C",
-        text: "一栋被自然包裹、内部是木头和柔光的疗愈系住宅。",
-        scores: { japMinimal: 1, nordic: 2, neoChinese: 1 },
-      },
-      {
-        label: "D",
-        text: "一栋靠近海或港口、可以任意改造的自由房子。",
-        scores: { mediterranean: 2, industrial: 1 },
-      },
-    ],
-  },
 ]
 
 // 导出以便 app.js 使用（浏览器环境下就是全局常量）
 window.QUESTIONS = QUESTIONS
-
